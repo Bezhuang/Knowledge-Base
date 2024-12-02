@@ -24,20 +24,3 @@ hero:
 #   - title: 记录
 #     # details: Don’t hope. Hope is for people who aren’t prepared.
 ---
-<!--
-<VPTeamMembers size="medium" :members="members" />
-
-<script setup>
-import { VPTeamMembers } from 'vitepress/theme'
-
-const members = [
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/63179818?v=4',
-    name: 'Bezhuang',
-    // title: '',
-    links: [
-      { icon: 'github', link: 'https://github.com/Bezhuang' }
-    ]
-  }
-]
-</script> -->

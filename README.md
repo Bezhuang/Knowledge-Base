@@ -21,7 +21,13 @@
 
 ### 启动/部署
 
-在 /docs/ 下运行
+在 `/` 下运行
+
+```
+npm i
+```
+
+在 `/docs/` 下运行
 
 ```
 npx vitepress dev --port 1234
@@ -29,4 +35,4 @@ npx vitepress dev --port 1234
 npx vitepress build
 ```
 
-上传 /docs/ 目录内的所有文件到 openresty/www/sites/docs.shisu.icu/index 下
+上传 `/docs/` 目录内的所有文件到 `openresty/www/sites/docs.shisu.icu/index` 下

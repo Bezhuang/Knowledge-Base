@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Bezhuang's Docs (Preview)",
+  lang: 'zh-CN',
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }]
   ],
@@ -13,6 +14,7 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '算法手册', link: '/算法/' },
+      { text: 'Spring 全家桶', link: '/Spring/' },
       {
         text: '读书笔记',
         items: [
@@ -29,22 +31,54 @@ export default defineConfig({
           items: [
             {
               text: 'C++ 语法基础', link: '/算法/C++/',
-              collapsed: true,
+              collapsed: false,
               items: [
                 { text: '变量、表达式和语句', link: '/算法/C++/变量、表达式和语句' },
                 { text: '数组、字符串和函数', link: '/算法/C++/数组、字符串和函数' },
                 { text: '类、结构体、指针和引用', link: '/算法/C++/类、结构体、指针和引用' },
                 { text: 'STL、位运算和常用库函数', link: '/算法/C++/STL、位运算和常用库函数' }
               ]
-            }
+            },
+            { text: 'C 语法基础', link: 'https://s.54benniao.com/ttib02b' },
+            { text: 'Java 语法基础', link: 'https://s.54benniao.com/ttf3itv20' }
           ]
         },
         {
           text: '算法入门',
           items: [
             {
-              text: 'TODO'
+              text: '未完待续'
             }
+          ]
+        }
+      ],
+      '/Spring/': [
+        {
+          text: 'Java 进阶',
+          items: [
+            {
+              text: '未完待续'
+            }
+          ]
+        },
+        {
+          text: '常用开发库',
+          collapsed: false,
+          items: [
+            { text: 'Lombok 工具库', link: '/Spring/Lombok' },
+            { text: '未完待续' }
+          ]
+        },
+        {
+          text: 'Spring 基础教程',
+          collapsed: true,
+          items: [
+            { text: 'Spring 框架教程', link: 'https://s.54benniao.com/t0yzitb8v' },
+            { text: 'Thymeleaf 教程', link: 'https://s.54benniao.com/tbaqitt8b' },
+            { text: 'MyBatis 框架教程', link: 'https://s.54benniao.com/tbgaiv08b' },
+            { text: 'Spring MVC 教程', link: 'https://s.54benniao.com/tvglivvgt' },
+            { text: 'Spring Boot 教程', link: 'https://s.54benniao.com/t02fi0vgb' },
+            { text: 'Spring Cloud 教程', link: 'https://s.54benniao.com/t08divtgt' }
           ]
         }
       ]
@@ -56,29 +90,22 @@ export default defineConfig({
 
     search: {
       provider: 'local',
-      options: {
-        miniSearch: {
-          /**
-           * @type {Pick<import('minisearch').Options, 'extractField' | 'tokenize' | 'processTerm'>}
-           */
-          options: {
-            /* ... */
-          },
-          /**
-           * @type {import('minisearch').SearchOptions}
-           * @default
-           * { fuzzy: 0.2, prefix: true, boost: { title: 4, text: 2, titles: 1 } }
-           */
-          searchOptions: {
-            /* ... */
-          }
-        }
-      }
     },
 
     footer: {
       // message: 'Released under the MIT License.',
       copyright: '©2024 Bezhuang'
+    },
+    i18nRouting: false,
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
+    darkModeSwitchLabel: '外观',
+    returnToTopLabel: '返回顶部',
+    sidebarMenuLabel: '菜单',
+    outline: {
+      level: "deep", label: "目录"
     }
   },
 
